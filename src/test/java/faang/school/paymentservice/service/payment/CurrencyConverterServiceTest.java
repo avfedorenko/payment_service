@@ -15,6 +15,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.util.Map;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.eq;
@@ -39,13 +40,13 @@ class CurrencyConverterServiceTest {
         firstPaymentRequest = PaymentRequest.builder()
                 .currency(Currency.USD)
                 .amount(BigDecimal.valueOf(1000))
-                .paymentNumber(0)
+                .paymentNumber(UUID.randomUUID())
                 .build();
 
         secondPaymentRequest = PaymentRequest.builder()
                 .currency(Currency.EUR)
                 .amount(BigDecimal.valueOf(1000))
-                .paymentNumber(0)
+                .paymentNumber(UUID.randomUUID())
                 .build();
 
 
